@@ -10,11 +10,20 @@
 html{
     scroll-behavior: smooth;
 }
+a{
+    text-decoration: none;
+}
+/* navbar  */
 .logo{
     width: 60px;
     object-fit: cover;
 }
-
+.md-navIcon{
+    display: none;
+}
+.navIconList{
+    align-items: center;
+}
 .navIconList a{
     color: var(--secondary-black);
     font-size: 1.25rem;
@@ -54,6 +63,16 @@ html{
     border: 2px solid var(--secondary-black);
     padding: 9px;
 }
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: all 0.3s ease;
+}
+
 main{
     min-height: 70vh;
 }
@@ -329,7 +348,7 @@ footer{
     text-align: center;
     /* width: auto; */
 }
-#cartSub, #cartAdd{
+.cartSub, .cartAdd{
     font-weight: 600;
     font-size: 1.5rem;
     cursor: pointer;
@@ -388,7 +407,10 @@ footer{
 }
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 900px){
+    .md-navIcon{
+        display: flex;
+    }
     .navbar-nav{
         margin-left: 2rem;
     }
